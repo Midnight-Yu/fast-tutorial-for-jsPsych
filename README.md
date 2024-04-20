@@ -1,2 +1,4 @@
 # Fast tutorial for jsPsych
-A Stroop experiment for demonstrating how to code in jsPsych.
+A simple experiment for demonstrating how to code in jsPsych.
+
+Adapted from the jsPsych tutorial by Shao-bin Jiang.
