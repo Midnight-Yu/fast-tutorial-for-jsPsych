@@ -18,7 +18,8 @@ let blue_timeline = {
         {
             stimulus: `+`,
             choices: ["NO_KEYS"],
-            trial_duration: 500
+            trial_duration: 500,
+            post_trial_gap: 2000
         },
         {
             stimulus: `<img src="./images/blue.png">`,
@@ -34,7 +35,8 @@ let orange_timeline = {
         {
             stimulus: `+`,
             choices: ["NO_KEYS"],
-            trial_duration: 500
+            trial_duration: 500,
+            post_trial_gap: 2000
         },
         {
             stimulus: `<img src="./images/orange.png">`,
