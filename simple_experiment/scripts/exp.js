@@ -11,21 +11,41 @@ let instruction = {
     post_trial_gap: 500
 }
 
-let blue_trial = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: `<img src="./images/blue.png">`,
-    choices: ['f','j'],
-    post_trial_gap: 500
+let blue_timeline = {
+    timeline: [
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            stimulus: ``,
+            choices: ["NO_KEYS"],
+            post_trial_gap: 500
+        },
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            stimulus: `<img src="./images/blue.png">`,
+            choices: ['f','j'],
+            post_trial_gap: 500
+        }
+    ]
 }
 
-let orange_trial = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: `<img src="./images/orange.png">`,
-    choices: ['f','j'],
-    post_trial_gap: 500
+let orange_timeline = {
+    timeline: [
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            stimulus: ``,
+            choices: ["NO_KEYS"],
+            post_trial_gap: 500
+        },
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            stimulus: `<img src="./images/orange.png">`,
+            choices: ['f','j'],
+            post_trial_gap: 500
+        }
+    ]
 }
 
 jsPsych.run([
     instruction,
-    blue_trial, orange_trial, blue_trial, orange_trial, blue_trial, orange_trial
+    blue_timeline, orange_timeline, blue_timeline, orange_timeline, blue_timeline, orange_timeline
 ])
