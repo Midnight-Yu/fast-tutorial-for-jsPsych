@@ -12,35 +12,33 @@ let instruction = {
 }
 
 let blue_timeline = {
+    type: jsPsychHtmlKeyboardResponse,
+    post_trial_gap: 500,
     timeline: [
         {
-            type: jsPsychHtmlKeyboardResponse,
-            stimulus: ``,
+            stimulus: `+`,
             choices: ["NO_KEYS"],
-            post_trial_gap: 500
+            trial_duration: 500
         },
         {
-            type: jsPsychHtmlKeyboardResponse,
             stimulus: `<img src="./images/blue.png">`,
-            choices: ['f','j'],
-            post_trial_gap: 500
+            choices: ['f','j']
         }
     ]
 }
 
 let orange_timeline = {
+    type: jsPsychHtmlKeyboardResponse,
+    post_trial_gap: 500,
     timeline: [
         {
-            type: jsPsychHtmlKeyboardResponse,
-            stimulus: ``,
+            stimulus: `+`,
             choices: ["NO_KEYS"],
-            post_trial_gap: 500
+            trial_duration: 500
         },
         {
-            type: jsPsychHtmlKeyboardResponse,
             stimulus: `<img src="./images/orange.png">`,
-            choices: ['f','j'],
-            post_trial_gap: 500
+            choices: ['f','j']
         }
     ]
 }
