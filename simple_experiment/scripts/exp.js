@@ -11,7 +11,8 @@ let instruction = {
     post_trial_gap: 500
 }
 
-let blue_timeline = {
+// Timeline Variables Demo
+let timeline_demo = {
     type: jsPsychHtmlKeyboardResponse,
     post_trial_gap: 500,
     timeline: [
@@ -19,33 +20,23 @@ let blue_timeline = {
             stimulus: `+`,
             choices: ["NO_KEYS"],
             trial_duration: 500,
-            post_trial_gap: 2000
         },
         {
-            stimulus: `<img src="./images/blue.png">`,
+            stimulus: jsPsych.timelineVariable('picture'),
             choices: ['f','j']
         }
-    ]
-}
-
-let orange_timeline = {
-    type: jsPsychHtmlKeyboardResponse,
-    post_trial_gap: 500,
-    timeline: [
-        {
-            stimulus: `+`,
-            choices: ["NO_KEYS"],
-            trial_duration: 500,
-            post_trial_gap: 2000
-        },
-        {
-            stimulus: `<img src="./images/orange.png">`,
-            choices: ['f','j']
-        }
-    ]
+    ],
+    timeline_variables: [
+        {picture: '<img src="./images/blue.png">'},
+        {picture: '<img src="./images/orange.png">'},
+    ],
+    sample: {
+        type: 'fixed-repetitions',
+        size: 30
+    }
 }
 
 jsPsych.run([
     instruction,
-    blue_timeline, orange_timeline, blue_timeline, orange_timeline, blue_timeline, orange_timeline
+    timeline_demo
 ])
